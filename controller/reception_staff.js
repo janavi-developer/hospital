@@ -72,3 +72,12 @@ exports.createPatientCount = async (req, res) => {
         });
     }
 };
+
+exports.getdata = async (req,res) =>{
+    var data = await PatientCount.find()
+
+    res.status(200).json({
+        status:"data fetch success...",
+        data
+    })
+}

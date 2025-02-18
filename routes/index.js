@@ -6,6 +6,7 @@ const router = express.Router();
 const reception_staff = require('../controller/reception_staff');
 const room_managment = require('../controller/room_managment')
 
+router.get('/',reception_staff.getdata);
 
 router.post('/createStaff', reception_staff.createStaff);
 
